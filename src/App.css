@@ -1,0 +1,75 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+
+/* mine */
+body {
+  place-items: normal !important;
+}
+fieldset {
+  display: flex;
+  gap:1em;
+  align-items:center;
+  justify-content: center;
+  border-width:4px;
+  border-image: linear-gradient(170deg, hotpink, orange) 1;
+}
+label {
+  cursor: pointer;
+}
+/* .result,  */
+em {
+  color: hotpink;
+}
+fieldset span {
+  color:#777
+}
+@media screen and (max-width: 520px) {
+  .first-choice {
+    flex-direction: column;
+    gap:2px
+  }
+  .first-choice input {
+    top: 2px;
+    position: relative;
+  }
+}

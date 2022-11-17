@@ -21,24 +21,24 @@ function App() {
   return (
     <div className="App">
       <form action="" onChange={(e) => {
-        if (e.target.value == "inductive") {
+        if (e.currentTarget.value == "inductive") {
           setIsInductive(true)
           setIsDeductive(false)
           setIsNeither(false)
         }
-        if (e.target.value == "deductive") {
+        if (e.currentTarget.value == "deductive") {
           setIsDeductive(true)
           setIsInductive(false)
           setIsNeither(false)
         }
-        if (e.target.value == "neither") {
+        if (e.currentTarget.value == "neither") {
           setIsNeither(true)
           setIsDeductive(false)
           setIsInductive(false)
         }
       }}>
         <h2>Does your conclusion follow your premise:</h2>
-        <fieldset class="first-choice">
+        <fieldset className="first-choice">
             <label htmlFor="deductive">
              indefinitely? <input name="inductive-or-deductive" id="deductive" type="radio" value="deductive" checked={isDeductive} />
             </label>
@@ -56,7 +56,7 @@ function App() {
         <div className="deductive">
           <h2>This is considered <em>deductive reasoning</em>.</h2>
           <form action="" onChange={(e) => {
-            if (e.target.value == "true") {
+            if (e.currentTarget.value == "true") {
               setIsSound(true)
             } else {
               setIsSound(false)
@@ -85,7 +85,7 @@ function App() {
         <div className="inductive">
           <h2>This is considered <em>inductive reasoning</em>.</h2>
           <form action="" onChange={(e) => {
-            if (e.target.value == "strong") {
+            if (e.currentTarget.value == "strong") {
               setIsStrong(true)
             } else {
               setIsStrong(false)
@@ -103,7 +103,7 @@ function App() {
             </fieldset>
           </form> 
           <form action="" onChange={(e) => {
-            if (e.target.value == "true") {
+            if (e.currentTarget.value == "true") {
               setIsSound(true)
             } else {
               setIsSound(false)

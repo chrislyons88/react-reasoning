@@ -21,17 +21,17 @@ function App() {
   return (
     <div className="App">
       <form action="" onChange={(e) => {
-        if (e.currentTarget.value == "inductive") {
+        if ((e.target as HTMLInputElement).value  == "inductive") {
           setIsInductive(true)
           setIsDeductive(false)
           setIsNeither(false)
         }
-        if (e.currentTarget.value == "deductive") {
+        if ((e.target as HTMLInputElement).value  == "deductive") {
           setIsDeductive(true)
           setIsInductive(false)
           setIsNeither(false)
         }
-        if (e.currentTarget.value == "neither") {
+        if ((e.target as HTMLInputElement).value  == "neither") {
           setIsNeither(true)
           setIsDeductive(false)
           setIsInductive(false)
@@ -40,15 +40,15 @@ function App() {
         <h2>Does your conclusion follow your premise:</h2>
         <fieldset className="first-choice">
             <label htmlFor="deductive">
-             indefinitely? <input name="inductive-or-deductive" id="deductive" type="radio" value="deductive" checked={isDeductive} />
+             indefinitely? <input name="inductive-or-deductive" id="deductive" type="radio" value="deductive" defaultChecked={isDeductive} />
             </label>
             <span>or</span>      
             <label htmlFor="inductive">
-              with some probability? <input name="inductive-or-deductive" id="inductive" type="radio" value="inductive" checked={isInductive}/>
+              with some probability? <input name="inductive-or-deductive" id="inductive" type="radio" value="inductive" defaultChecked={isInductive}/>
             </label>
             <span>or</span>      
             <label htmlFor="neither">
-             neither <input name="inductive-or-deductive" id="neither" type="radio" value="neither" checked={isNeither} />
+             neither <input name="inductive-or-deductive" id="neither" type="radio" value="neither" defaultChecked={isNeither} />
             </label>
         </fieldset>
       </form>
@@ -56,7 +56,7 @@ function App() {
         <div className="deductive">
           <h2>This is considered <em>deductive reasoning</em>.</h2>
           <form action="" onChange={(e) => {
-            if (e.currentTarget.value == "true") {
+            if ((e.target as HTMLInputElement).value  == "true") {
               setIsSound(true)
             } else {
               setIsSound(false)
@@ -65,11 +65,11 @@ function App() {
             <h3>Is your premise:</h3>
             <fieldset>
                 <label htmlFor="true">
-                  true? <input name="premise-true" id="true" type="radio" value="true" checked={isSound}/>
+                  true? <input name="premise-true" id="true" type="radio" value="true" defaultChecked={isSound}/>
                 </label>
                 <span>or</span>      
                 <label htmlFor="false">
-                untrue? <input name="premise-true" id="false" type="radio" value="false" checked={!isSound} />
+                untrue? <input name="premise-true" id="false" type="radio" value="false" defaultChecked={!isSound} />
                 </label>
             </fieldset>
           </form> 
@@ -85,7 +85,7 @@ function App() {
         <div className="inductive">
           <h2>This is considered <em>inductive reasoning</em>.</h2>
           <form action="" onChange={(e) => {
-            if (e.currentTarget.value == "strong") {
+            if ((e.target as HTMLInputElement).value  == "strong") {
               setIsStrong(true)
             } else {
               setIsStrong(false)
@@ -94,16 +94,16 @@ function App() {
             <h3>Is the probability:</h3>
             <fieldset>
                 <label htmlFor="strong">
-                  high? <input name="premise-strong" id="strong" type="radio" value="strong" checked={isStrong}/>
+                  high? <input name="premise-strong" id="strong" type="radio" value="strong" defaultChecked={isStrong}/>
                 </label>
                 <span>or</span>      
                 <label htmlFor="weak">
-                  low? <input name="premise-strong" id="weak" type="radio" value="weak" checked={!isStrong} />
+                  low? <input name="premise-strong" id="weak" type="radio" value="weak" defaultChecked={!isStrong} />
                 </label>
             </fieldset>
           </form> 
           <form action="" onChange={(e) => {
-            if (e.currentTarget.value == "true") {
+            if ((e.target as HTMLInputElement).value  == "true") {
               setIsSound(true)
             } else {
               setIsSound(false)
@@ -112,11 +112,11 @@ function App() {
             <h3>And your premise:</h3>
             <fieldset>
                 <label htmlFor="true">
-                  true? <input name="premise-true" id="true" type="radio" value="true" checked={isSound}/>
+                  true? <input name="premise-true" id="true" type="radio" value="true" defaultChecked={isSound}/>
                 </label>
                 <span>or</span>      
                 <label htmlFor="false">
-                untrue? <input name="premise-true" id="false" type="radio" value="false" checked={!isSound} />
+                untrue? <input name="premise-true" id="false" type="radio" value="false" defaultChecked={!isSound} />
                 </label>
             </fieldset>
           </form> 

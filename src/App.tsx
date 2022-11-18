@@ -20,6 +20,9 @@ function App() {
 
   return (
     <div className="App">
+      <main>
+
+      
       <form action="" onChange={(e) => {
         if ((e.target as HTMLInputElement).value  == "inductive") {
           setIsInductive(true)
@@ -37,7 +40,7 @@ function App() {
           setIsInductive(false)
         }
       }}>
-        <h2>Does your conclusion follow your premise:</h2>
+        <h1>Does your conclusion follow your premise:</h1>
         <fieldset className="first-choice">
             <label htmlFor="deductive">
              indefinitely? <input name="inductive-or-deductive" id="deductive" type="radio" value="deductive" defaultChecked={isDeductive} />
@@ -139,6 +142,7 @@ function App() {
           <h3 className="result">Your argument is <em>invalid</em> since the conclusion does not logically follow your premise.  This is a formal fallacy known as a <em>non-sequitur</em>.</h3>
         </div>
       }
+      </main>
     </div>
   )
 }

@@ -40,7 +40,7 @@ function App() {
           setIsInductive(false)
         }
       }}>
-        <h1>Does your conclusion follow your premise:</h1>
+        <h1>Does the conclusion follow the premise:</h1>
         <fieldset className="first-choice">
             <label htmlFor="deductive">
              indefinitely? <input name="inductive-or-deductive" id="deductive" type="radio" value="deductive" defaultChecked={isDeductive} />
@@ -65,7 +65,7 @@ function App() {
               setIsSound(false)
             }
           }}>
-            <h3>Is your premise:</h3>
+            <h3>Is the premise:</h3>
             <fieldset>
                 <label htmlFor="true">
                   true? <input name="premise-true" id="true" type="radio" value="true" defaultChecked={isSound}/>
@@ -77,10 +77,10 @@ function App() {
             </fieldset>
           </form> 
           {isSound && 
-            <h3>Your argument is both <em>valid</em> and <em>sound</em>.</h3>
+            <h3>The argument is both <em>valid</em> and <em>sound</em>.</h3>
           } 
           {!isSound && 
-            <h3>Your argument is <em>valid</em>, but <em>unsound</em>.</h3>
+            <h3>The argument is <em>valid</em>, but <em>unsound</em>.</h3>
           }
         </div>
       }
@@ -112,7 +112,7 @@ function App() {
               setIsSound(false)
             }
           }}>
-            <h3>And your premise:</h3>
+            <h3>And the premise:</h3>
             <fieldset>
                 <label htmlFor="true">
                   true? <input name="premise-true" id="true" type="radio" value="true" defaultChecked={isSound}/>
@@ -124,16 +124,16 @@ function App() {
             </fieldset>
           </form> 
           {(isStrong && isSound) && 
-            <h3>Your argument is <em>strong</em> and <em>cogent</em>.</h3>
+            <h3>The argument is <em>strong</em> and <em>cogent</em>.</h3>
           } 
           {(!isStrong && !isSound) && 
-            <h3>Your argument is <em>weak</em> and <em>uncogent</em> .</h3>
+            <h3>The argument is <em>weak</em> and <em>uncogent</em> .</h3>
           }
           {(isStrong && !isSound) && 
-            <h3>Your argument is <em>strong</em>, but <em>uncogent</em>.</h3>
+            <h3>The argument is <em>strong</em>, but <em>uncogent</em>.</h3>
           }
           {(!isStrong && isSound) && 
-            <h3>Your argument is <em>weak</em>, but <em>cogent</em>.</h3>
+            <h3>The argument is <em>weak</em>, but <em>cogent</em>.</h3>
           }
         </div>
       }

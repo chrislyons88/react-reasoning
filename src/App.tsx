@@ -139,7 +139,7 @@ function App() {
       }
       {isNeither &&
         <div className="neither">
-          <h3 className="result">Your argument is <em>invalid</em> since the conclusion does not logically follow your premise.  This is a formal fallacy known as a <em>non-sequitur</em>.</h3>
+          <h3 className="result">The argument is <em>invalid</em> since the conclusion does not logically follow the premise.  This is a formal fallacy known as a <em>non-sequitur</em>.</h3>
         </div>
       }
       </main>
